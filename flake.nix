@@ -30,7 +30,7 @@
               extraSpecialArgs = { inherit inputs; };
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.bnk = ./home.nix;
+              users.bnk = ./home/home.nix;
             }; 
           }
           

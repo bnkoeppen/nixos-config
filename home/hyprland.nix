@@ -1,5 +1,6 @@
-
+{ config, pkgs, ... }:
 {
+  wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
 
     monitor = ",preferred,auto,auto";
@@ -18,7 +19,7 @@
       gaps_out = 20;
       border_size = 2;
 
-      "col.active_border" = "rgba(33ccffee) rgbs(00ff99ee) 45deg";
+      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
       "col.inactive_border" = "rgba(595959aa)";
       resize_on_border = false;
       allow_tearing = false;
@@ -62,7 +63,7 @@
     };
 
     misc = {
-      force_defualt_wallpaper = 0;
+      force_default_wallpaper = 0;
     };
 
     input = {
@@ -77,7 +78,7 @@
     };
 
     gestures = {
-      workplace_swipe = true;
+      workspace_swipe = true;
     };
 
     "$mainMod" = "SUPER";
@@ -106,7 +107,7 @@
       "$mainMod, 7, workspace, 7"
       "$mainMod, 8, workspace, 8"
       "$mainMod, 9, workspace, 9"
-      "$mainMod, 10, workspace, 10"
+      "$mainMod, 0, workspace, 10"
 
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
@@ -117,7 +118,7 @@
       "$mainMod SHIFT, 7, movetoworkspace, 7"
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
-      "$mainMod SHIFT, 10, movetoworkspace, 10"
+      "$mainMod SHIFT, 0, movetoworkspace, 10"
     ];
 
     bindm = [
@@ -145,6 +146,8 @@
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
     ];
+    
+    exec-once = "waybar";
     
   };
 }
