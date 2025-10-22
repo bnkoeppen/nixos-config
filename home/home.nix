@@ -1,9 +1,10 @@
-{ config, pkgs, ...}:
+{ inputs, config, pkgs, ...}:
 
 {
   imports = [
     ./hyprland.nix
     ./waybar.nix
+    ./hyprpaper.nix
   ];
 
   home.username = "bnk";
@@ -23,8 +24,15 @@
     nerd-fonts.symbols-only
     pavucontrol
     brightnessctl
+    discord
+    swappy
+    unzip
+    vscodium.fhs
+    inputs.cider.packages.x86_64-linux.cider-2
   ];
 
+  
+  
   programs.git = {
     enable = true;
     userName = "bnkoeppen";
@@ -42,6 +50,11 @@
       nrebuild = "sudo nixos-rebuild switch --flake /etc/nixos";
       hlconf = "vim ~/.config/hypr/hyprland.conf";
     };
+  };
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium.fhs;
   };
   
   home.stateVersion = "25.05";

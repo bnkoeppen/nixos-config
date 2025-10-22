@@ -11,12 +11,16 @@
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
-    
+    };
+
+    cider = {
+      url = "/home/bnk/programs/cider-2";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   
   };
   
-  outputs = inputs@{ nixpkgs, home-manager, ... }: { 
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: { 
     nixosConfigurations = {
     
       zora = nixpkgs.lib.nixosSystem {

@@ -2,8 +2,8 @@
 {
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
-
-    monitor = ",preferred,auto,auto";
+    
+    monitor = ",preferred,auto,1.25";
     
     "$terminal" = "alacritty";
     "$fileManager" = "dolphin";
@@ -16,10 +16,11 @@
 
     general = {
       gaps_in = 5;
-      gaps_out = 20;
+      gaps_out = 10;
       border_size = 2;
 
-      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.active_border" = "rgba(33ccffee)";
       "col.inactive_border" = "rgba(595959aa)";
       resize_on_border = false;
       allow_tearing = false;
@@ -27,8 +28,8 @@
     };
 
     decoration = {
-      rounding = 10;
-      rounding_power = 2;
+      rounding = 0;
+      rounding_power = 0;
 
       active_opacity = 1.0;
       inactive_opacity = 1.0;
@@ -64,6 +65,12 @@
 
     misc = {
       force_default_wallpaper = 0;
+      disable_splash_rendering = true;
+      disable_hyprland_logo = true;
+    };
+    
+    xwayland = {
+      force_zero_scaling = true;
     };
 
     input = {
@@ -140,6 +147,7 @@
       ", XF86AudioPause, exec, playerctl play-pause"
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioPrev, exec, playerctl previous"
+      ", Print, exec, grim -g \"$(slurp)\" - | swappy -f - "
     ];
 
     windowrule = [
