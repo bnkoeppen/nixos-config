@@ -18,13 +18,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    #pokemon-desolation = {
+    # url = "/home/bnk/programs/pokemon-desolation";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+
   };
   
   outputs = { self, nixpkgs, home-manager, ... }@inputs: { 
     nixosConfigurations = {
     
       zora = nixpkgs.lib.nixosSystem {
-        
+        specialArgs = { inherit inputs; };
         system = "x86_64-linux";
         
         modules = [

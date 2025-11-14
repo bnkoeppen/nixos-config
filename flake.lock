@@ -9,7 +9,7 @@
       },
       "locked": {
         "lastModified": 0,
-        "narHash": "sha256-sWBFQaGNidf12+wJCq5c2/aKQv6bvWaiTdo0+bn8woI=",
+        "narHash": "sha256-FwCleZY3WBnVkwhmERFvaOCBkw9FyV6VvuXoQaQfupg=",
         "path": "/home/bnk/programs/cider-2",
         "type": "path"
       },
@@ -59,11 +59,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1760668593,
-        "narHash": "sha256-YOZxkYxT4dcN5fCdm5pbiAVc7l3Q3a3xePy1iAbVvEE=",
+        "lastModified": 1761082557,
+        "narHash": "sha256-YLYF3fHnzoWjdEU1RMZRT+QdpcYkAO+XorEqjO4i+Dc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7473e33cc2b6c5a7d15f6387103d2414601d884f",
+        "rev": "4d9bd66e3ea558621ae800445e9302a2aa1bb687",
         "type": "github"
       },
       "original": {

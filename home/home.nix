@@ -11,9 +11,9 @@
   home.homeDirectory = "/home/bnk";
 
   home.packages = with pkgs; [
-    gimp
     grim
     slurp
+    swappy
     wofi # Required for hyprland
     alacritty # Required for hyprland terminal
     hyprpaper # Required for hyprland bg
@@ -24,11 +24,22 @@
     nerd-fonts.symbols-only
     pavucontrol
     brightnessctl
-    discord
-    swappy
     unzip
+    corefonts
+    appimage-run
+
+    gimp
+    discord
     vscodium.fhs
     inputs.cider.packages.x86_64-linux.cider-2
+    keepassxc
+    libreoffice
+    zathura
+    
+    jetbrains.rider
+
+    cmake
+    gcc
   ];
 
   
@@ -55,6 +66,26 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium.fhs;
+  };
+
+  programs.obs-studio = {
+    enable = true;
+
+    # optional Nvidia hardware acceleration
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
+
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+      obs-vaapi #optional AMD hardware acceleration
+      obs-gstreamer
+      obs-vkcapture
+    ];
   };
   
   home.stateVersion = "25.05";

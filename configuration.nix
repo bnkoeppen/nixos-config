@@ -24,8 +24,13 @@
     enable = true;
     pulse.enable = true;
   };
-
   services.libinput.enable = true;
+  services.devmon.enable = true;
+  services.gvfs.enable = true; 
+  services.udisks2.enable = true;
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+  services.tlp.enable = true;
 
   users.users.bnk = {
     isNormalUser = true;
@@ -47,6 +52,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     playerctl # Required for hyprland audio
+    rustdesk
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

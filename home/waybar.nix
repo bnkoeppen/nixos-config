@@ -47,7 +47,7 @@
           phone = " ";
           portable = " ";
           car = " ";
-          default = [ " " " " " " ];
+          default = [ "󰕿 " "󰖀 " "󰕾 " ];
         };
         on-click = "pavucontrol";
       };
@@ -79,7 +79,7 @@
 
   programs.waybar.style = ''
     * {
-      font-family: Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+      font-family: FontAwesome, Nerd Font, Roboto, Helvetica, Arial, sans-serif;
       font-size: 13px;
     }
     
