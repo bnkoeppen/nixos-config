@@ -1,5 +1,8 @@
 { inputs, config, pkgs, ...}:
 
+let
+  R-studio-custom = pkgs.rstudioWrapper.override{ packages = with pkgs.rPackages; [ ggplot2 knitr rmarkdown lubridate tidyverse zoo tinytex ]; };
+in
 {
   imports = [
     ./hyprland.nix
@@ -9,7 +12,6 @@
 
   home.username = "bnk";
   home.homeDirectory = "/home/bnk";
-
   home.packages = with pkgs; [
     grim
     slurp
@@ -27,19 +29,23 @@
     unzip
     corefonts
     appimage-run
+    python3Full
 
     gimp
     discord
-    vscodium.fhs
     inputs.cider.packages.x86_64-linux.cider-2
     keepassxc
     libreoffice
     zathura
+    musescore
+    R-studio-custom
     
+    vscodium.fhs 
     jetbrains.rider
-
     cmake
     gcc
+    clang-tools
+    gnumake
   ];
 
   
@@ -86,6 +92,10 @@
       obs-gstreamer
       obs-vkcapture
     ];
+  };
+
+  programs.yazi = {
+    enable = true;
   };
   
   home.stateVersion = "25.05";

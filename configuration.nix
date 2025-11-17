@@ -31,6 +31,8 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   services.tlp.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+  services.mullvad-vpn.enable = true;
 
   users.users.bnk = {
     isNormalUser = true;
