@@ -40,7 +40,8 @@ in
     musescore
     R-studio-custom
     azahar   
- 
+
+    zed-editor 
     vscodium.fhs 
     jetbrains.rider
     cmake
