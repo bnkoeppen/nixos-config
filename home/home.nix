@@ -39,7 +39,8 @@ in
     zathura
     musescore
     R-studio-custom
-    
+    azahar   
+ 
     vscodium.fhs 
     jetbrains.rider
     cmake

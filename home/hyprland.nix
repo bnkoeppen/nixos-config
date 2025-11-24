@@ -3,7 +3,10 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     
-    monitor = ",preferred,auto,1.25";
+    monitor = [
+      "eDP-1,preferred,auto,1.25"
+      ",preferred,auto,1,mirror,eDP-1"
+    ];
     
     "$terminal" = "alacritty";
     "$fileManager" = "dolphin";
@@ -104,6 +107,10 @@
       "$mainMod, right, movefocus, r"
       "$mainMod, up, movefocus, u"
       "$mainMod, down, movefocus, d"
+      "$mainMod SHIFT, left, movewindow, l"
+      "$mainMod SHIFT, right, movewindow, r"
+      "$mainMod SHIFT, up, movewindow, u"
+      "$mainMod SHIFT, down, movewindow, d"
 
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
