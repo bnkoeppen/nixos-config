@@ -29,7 +29,10 @@ in
     unzip
     corefonts
     appimage-run
-    python3Full
+    python3
+    nodejs
+    racket
+    pix 
 
     gimp
     discord
@@ -39,7 +42,8 @@ in
     zathura
     musescore
     R-studio-custom
-    azahar   
+    azahar
+    obsidian
 
     zed-editor 
     vscodium.fhs 
@@ -48,14 +52,17 @@ in
     gcc
     clang-tools
     gnumake
+    python313Packages.jupyterlab
+
+    vintagestory
   ];
 
-  
-  
   programs.git = {
     enable = true;
-    userName = "bnkoeppen";
-    userEmail = "bnkoeppen@gmail.com";
+    settings.user = {
+      name = "bnkoeppen";
+      email = "bnkoeppen@gmail.com";
+    };
   };
   
   programs.bash = {
@@ -99,6 +106,6 @@ in
   programs.yazi = {
     enable = true;
   };
-  
-  home.stateVersion = "25.05";
+
+  home.stateVersion = "25.11";
 }

@@ -43,8 +43,11 @@
   };
 
   programs.firefox.enable = true;
-  programs.hyprland.enable = true;  
+  programs.hyprland.enable = true;
+  programs.hyprlock.enable = true; 
   programs.steam.enable = true;
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   
@@ -59,7 +62,7 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 
 }
 
