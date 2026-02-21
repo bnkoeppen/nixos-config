@@ -103,9 +103,5 @@ in
     ];
   };
 
-  programs.yazi = {
-    enable = true;
-  };
-
   home.stateVersion = "25.11";
 }

@@ -51,13 +51,9 @@
 
   nixpkgs.config.allowUnfree = true;
   
-# List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
     playerctl # Required for hyprland audio
-    rustdesk
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
