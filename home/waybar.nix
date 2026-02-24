@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   programs.waybar.enable = true;
-  
+
   programs.waybar.settings = {
     main-bar = {
       layer = "top";
@@ -11,7 +11,7 @@
       modules-left = [
         "hyprland/workspaces"
       ];
-      
+
       modules-center = [
         "hyprland/window"
       ];
@@ -41,20 +41,34 @@
         format-source = "{volume}%  ";
         format-source-muted = " ";
         format-icons = {
-          headphone =  " ";
+          headphone = " ";
           hands-free = " ";
           headset = " ";
           phone = " ";
           portable = " ";
           car = " ";
-          default = [ "󰕿 " "󰖀 " "󰕾 " ];
+          default = [
+            "󰕿 "
+            "󰖀 "
+            "󰕾 "
+          ];
         };
         on-click = "pavucontrol";
       };
 
       backlight = {
         format = "{percent}% {icon}";
-        format-icons = [ "" "" "" "" "" "" "" "" "" ]; 
+        format-icons = [
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+        ];
       };
 
       battery = {
@@ -67,7 +81,13 @@
         format-chargind = "{capacity}% ";
         format-plugged = "{capacity}% ";
         format-alt = "{time} {icon}";
-        format-icons = [ "" "" "" "" "" ];
+        format-icons = [
+          ""
+          ""
+          ""
+          ""
+          ""
+        ];
       };
 
       clock = {
@@ -82,7 +102,7 @@
       font-family: FontAwesome, Nerd Font, Roboto, Helvetica, Arial, sans-serif;
       font-size: 13px;
     }
-    
+
     window#waybar {
       background-color: rgba(43, 48, 59, 0.5);
       border-bottom: 3px solid rgba(100, 114, 125, 0.5);
@@ -101,7 +121,7 @@
 
     button:hover {
       background: inherit;
-      box-shadow: inset 0 -3px #ffffff; 
+      box-shadow: inset 0 -3px #ffffff;
     }
 
     #workspaces button {
@@ -118,7 +138,7 @@
       background-color: #64727D;
       box-shadow: inset 0 -3px #ffffff;
     }
-    
+
     #clock,
     #battery,
     #backlight,

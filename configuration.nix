@@ -1,4 +1,10 @@
-{ inputs, config, lib, pkgs, ... }:
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   nix = {
@@ -7,16 +13,15 @@
     '';
   };
 
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "zora"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "America/New_York";
 
@@ -26,7 +31,7 @@
   };
   services.libinput.enable = true;
   services.devmon.enable = true;
-  services.gvfs.enable = true; 
+  services.gvfs.enable = true;
   services.udisks2.enable = true;
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
@@ -36,7 +41,10 @@
 
   users.users.bnk = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -44,13 +52,13 @@
 
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
-  programs.hyprlock.enable = true; 
+  programs.hyprlock.enable = true;
   programs.steam.enable = true;
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  
+
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     playerctl # Required for hyprland audio
@@ -61,4 +69,3 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
-

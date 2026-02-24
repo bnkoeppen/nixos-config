@@ -1,7 +1,22 @@
-{ inputs, config, pkgs, ...}:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 let
-  R-studio-custom = pkgs.rstudioWrapper.override{ packages = with pkgs.rPackages; [ ggplot2 knitr rmarkdown lubridate tidyverse zoo tinytex ]; };
+  R-studio-custom = pkgs.rstudioWrapper.override {
+    packages = with pkgs.rPackages; [
+      ggplot2
+      knitr
+      rmarkdown
+      lubridate
+      tidyverse
+      zoo
+      tinytex
+    ];
+  };
 in
 {
   imports = [
@@ -32,7 +47,7 @@ in
     python3
     nodejs
     racket
-    pix 
+    pix
 
     gimp
     discord
@@ -45,8 +60,11 @@ in
     azahar
     obsidian
 
-    zed-editor 
-    vscodium.fhs 
+    zed-editor-fhs
+    nil
+    nixd
+
+    vscodium.fhs
     jetbrains.rider
     cmake
     gcc
@@ -64,11 +82,11 @@ in
       email = "bnkoeppen@gmail.com";
     };
   };
-  
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    
+
     shellAliases = {
       la = "ls -la";
       nconf = "sudo vim /etc/nixos/configuration.nix";
@@ -97,7 +115,7 @@ in
       wlrobs
       obs-backgroundremoval
       obs-pipewire-audio-capture
-      obs-vaapi #optional AMD hardware acceleration
+      obs-vaapi # optional AMD hardware acceleration
       obs-gstreamer
       obs-vkcapture
     ];

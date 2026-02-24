@@ -1,13 +1,13 @@
 {
- 
+
   description = "Master flake for zora";
 
   inputs = {
-    
+
     nixpkgs = {
       url = "github:NixOS/nixpkgs/release-25.11";
     };
-   
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,28 +24,36 @@
     #};
 
   };
-  
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: { 
-    nixosConfigurations = {
-    
-      zora = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        system = "x86_64-linux";
-        
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager {
-            home-manager = { 
-              extraSpecialArgs = { inherit inputs; };
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.bnk = ./home/home.nix;
-            }; 
-          }
-          
-        ];
-        
+
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations = {
+
+        zora = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          system = "x86_64-linux";
+
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                extraSpecialArgs = { inherit inputs; };
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.bnk = ./home/home.nix;
+              };
+            }
+
+          ];
+
+        };
       };
     };
-  };
 }

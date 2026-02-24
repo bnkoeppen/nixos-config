@@ -2,12 +2,12 @@
 {
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
-    
+
     monitor = [
       "eDP-1,preferred,auto,1.25"
       ",preferred,auto,1,mirror,eDP-1"
     ];
-    
+
     "$terminal" = "alacritty";
     "$fileManager" = "dolphin";
     "$menu" = "wofi --show drun";
@@ -71,7 +71,7 @@
       disable_splash_rendering = true;
       disable_hyprland_logo = true;
     };
-    
+
     xwayland = {
       force_zero_scaling = true;
     };
@@ -81,7 +81,7 @@
       follow_mouse = 1;
       sensitivity = 0;
       accel_profile = "flat";
-      
+
       touchpad = {
         natural_scroll = false;
       };
@@ -90,7 +90,7 @@
     gesture = " 3, horizontal, workspace";
 
     "$mainMod" = "SUPER";
-    
+
     bind = [
       "$mainMod, Q, exec, $terminal"
       "$mainMod, C, killactive"
@@ -147,7 +147,7 @@
       ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
       ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
     ];
-    
+
     bindl = [
       ", XF86AudioNext, exec, playerctl next"
       ", XF86AudioPause, exec, playerctl play-pause"
@@ -160,8 +160,8 @@
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
     ];
-    
+
     exec-once = "waybar";
-    
+
   };
 }
