@@ -5,19 +5,6 @@
   ...
 }:
 
-let
-  R-studio-custom = pkgs.rstudioWrapper.override {
-    packages = with pkgs.rPackages; [
-      ggplot2
-      knitr
-      rmarkdown
-      lubridate
-      tidyverse
-      zoo
-      tinytex
-    ];
-  };
-in
 {
   imports = [
     ./hyprland.nix
@@ -27,6 +14,11 @@ in
 
   home.username = "bnk";
   home.homeDirectory = "/home/bnk";
+  
+  xdg.userDirs.enable = true;
+  xdg.userDirs.documents = "${config.home.homeDirectory}/documents/xdg_documents";
+  xdg.userDirs.download = "${config.home.homeDirectory}/downloads";
+
   home.packages = with pkgs; [
     grim
     slurp
@@ -41,13 +33,9 @@ in
     nerd-fonts.symbols-only
     pavucontrol
     brightnessctl
-    unzip
     corefonts
+    
     appimage-run
-    python3
-    nodejs
-    racket
-    pix
     fastfetch
 
     gimp
@@ -55,24 +43,15 @@ in
     inputs.cider.packages.x86_64-linux.cider-2
     keepassxc
     libreoffice
-    zathura
-    R-studio-custom
-    azahar
     obsidian
 
-    zed-editor-fhs
+    python3
+    racket
     nil
     nixd
 
-    vscodium.fhs
-    jetbrains.rider
-    cmake
-    gcc
-    clang-tools
-    gnumake
-    python313Packages.jupyterlab
-
     vintagestory
+    azahar
   ];
 
   programs.git = {
