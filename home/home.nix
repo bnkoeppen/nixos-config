@@ -48,6 +48,7 @@ in
     nodejs
     racket
     pix
+    fastfetch
 
     gimp
     discord
@@ -55,7 +56,6 @@ in
     keepassxc
     libreoffice
     zathura
-    musescore
     R-studio-custom
     azahar
     obsidian
