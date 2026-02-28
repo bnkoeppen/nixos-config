@@ -7,14 +7,13 @@
 
 {
   imports = [
-    ./hyprland.nix
-    ./waybar.nix
-    ./hyprpaper.nix
+    ./programs
+    ./hyprland/hyprland.nix
   ];
 
   home.username = "bnk";
   home.homeDirectory = "/home/bnk";
-  
+
   xdg.userDirs.enable = true;
   xdg.userDirs.documents = "${config.home.homeDirectory}/documents/xdg_documents";
   xdg.userDirs.download = "${config.home.homeDirectory}/downloads";
@@ -23,18 +22,13 @@
     grim
     slurp
     swappy
-    wofi # Required for hyprland
-    alacritty # Required for hyprland terminal
     hyprpaper # Required for hyprland bg
     kdePackages.qtsvg
     kdePackages.dolphin # Required for hyprland files
     waybar
-    font-awesome
-    nerd-fonts.symbols-only
     pavucontrol
     brightnessctl
-    corefonts
-    
+
     appimage-run
     fastfetch
 
@@ -44,15 +38,29 @@
     keepassxc
     libreoffice
     obsidian
+    readest
+    vim
 
     python3
     racket
-    nil
-    nixd
+    go
+    gcc
+    fyne
 
     vintagestory
     azahar
   ];
+
+  programs.kitty = {
+    enable = true;
+    extraConfig = ''
+      background_opacity 0.5
+    '';
+  };
+
+  programs.fuzzel = {
+    enable = true;
+  };
 
   programs.git = {
     enable = true;
@@ -67,11 +75,8 @@
     enableCompletion = true;
 
     shellAliases = {
-      la = "ls -la";
-      nconf = "sudo vim /etc/nixos/configuration.nix";
       ngc = "nix-store --gc";
       nrebuild = "sudo nixos-rebuild switch --flake /etc/nixos";
-      hlconf = "vim ~/.config/hypr/hyprland.conf";
     };
   };
 

@@ -5,7 +5,7 @@
   inputs = {
 
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/release-25.11";
+      url = "github:NixOS/nixpkgs/nixos-25.11";
     };
 
     home-manager = {
@@ -18,10 +18,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #pokemon-desolation = {
-    # url = "/home/bnk/programs/pokemon-desolation";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    zed-extensions = {
+      url = "github:DuskSystems/nix-zed-extensions";
+    };
 
   };
 
@@ -40,13 +39,14 @@
           system = "x86_64-linux";
 
           modules = [
-            ./configuration.nix
+            ./system/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
                 extraSpecialArgs = { inherit inputs; };
                 useGlobalPkgs = true;
                 useUserPackages = true;
+                sharedModules = [ zed-extensions.homeManagerModules.default ];
                 users.bnk = ./home/home.nix;
               };
             }

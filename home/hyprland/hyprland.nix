@@ -1,5 +1,10 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
+  imports = [
+    ./hyprpaper.nix
+    ./waybar.nix
+  ];
+
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
 
@@ -8,9 +13,9 @@
       ",preferred,auto,1,mirror,eDP-1"
     ];
 
-    "$terminal" = "alacritty";
+    "$terminal" = "kitty";
     "$fileManager" = "dolphin";
-    "$menu" = "wofi --show drun";
+    "$menu" = "fuzzel";
 
     env = [
       "XCURSOR_SIZE,24"

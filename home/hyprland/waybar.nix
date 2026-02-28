@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   programs.waybar.enable = true;
 
@@ -99,7 +99,7 @@
 
   programs.waybar.style = ''
     * {
-      font-family: FontAwesome, Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+      font-family: FontAwesome, iA Writer Quattro S, Nerd Font, Roboto, Helvetica, Arial, sans-serif;
       font-size: 13px;
     }
 

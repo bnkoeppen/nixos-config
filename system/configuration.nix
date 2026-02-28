@@ -11,7 +11,9 @@
   };
 
   imports = [
-    ./system
+    ./hardware-configuration.nix
+    ./fonts.nix
+    ./overlays.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -44,7 +46,7 @@
     ];
   };
 
-  programs.nixld.enable = true;
+  programs.nix-ld.enable = true;
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
