@@ -18,10 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zed-extensions = {
-      url = "github:DuskSystems/nix-zed-extensions";
-    };
-
   };
 
   outputs =
@@ -46,7 +42,6 @@
                 extraSpecialArgs = { inherit inputs; };
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                sharedModules = [ zed-extensions.homeManagerModules.default ];
                 users.bnk = ./home/home.nix;
               };
             }

@@ -8,7 +8,7 @@
 {
   imports = [
     ./programs
-    ./hyprland/hyprland.nix
+    ./hyprland
   ];
 
   home.username = "bnk";
