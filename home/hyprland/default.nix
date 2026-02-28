@@ -158,7 +158,7 @@
       ", XF86AudioPause, exec, playerctl play-pause"
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioPrev, exec, playerctl previous"
-      ", Print, exec, grim -g \"$(slurp)\" - | swappy -f - "
+      ", Print, exec, flameshot gui --clipboard --accept-on-select"
     ];
 
     windowrule = [

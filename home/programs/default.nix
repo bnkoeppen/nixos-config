@@ -1,11 +1,14 @@
 { ... }:
 {
   imports = [
-    ./zed
-    ./kitty
+    ./bash
+    ./flameshot
     ./fuzzel
     ./git
-    ./bash
+    ./kitty
     ./obs-studio
+    ./zed
+
+    ./misc.nix
   ];
 }
