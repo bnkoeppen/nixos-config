@@ -1,12 +1,9 @@
-{
-  config,
-  ...
-}:
-
+{ config, ... }:
 {
   imports = [
     ./programs
     ./hyprland
+    ./services
   ];
 
   home.username = "bnk";
