@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
-  home.pkgs = with pkgs; [
-    kdePackages.dolphin
+  home.packages = with pkgs; [
     pavucontrol
     brightnessctl
   ];

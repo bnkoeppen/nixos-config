@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     azahar
     discord
+    kdePackages.dolphin
     gimp
     libreoffice
     readest

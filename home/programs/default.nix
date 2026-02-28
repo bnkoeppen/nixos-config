@@ -2,9 +2,9 @@
 {
   imports = [
     ./bash
-    ./flameshot
     ./fuzzel
     ./git
+    ./hyprshot
     ./kitty
     ./obs-studio
     ./zed

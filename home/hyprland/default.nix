@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./deps.nix
     ./hyprpaper.nix
     ./waybar.nix
   ];
@@ -158,7 +159,7 @@
       ", XF86AudioPause, exec, playerctl play-pause"
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioPrev, exec, playerctl previous"
-      ", Print, exec, flameshot gui --clipboard --accept-on-select"
+      ", Print, exec, hyprshot -m region"
     ];
 
     windowrule = [
