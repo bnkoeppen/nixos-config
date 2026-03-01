@@ -33,25 +33,13 @@
     }@inputs:
     {
       nixosConfigurations = {
-
         zora = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           system = "x86_64-linux";
-
           modules = [
             ./system/configuration.nix
             home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                extraSpecialArgs = { inherit inputs; };
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.bnk = ./home/home.nix;
-              };
-            }
-
           ];
-
         };
       };
     };

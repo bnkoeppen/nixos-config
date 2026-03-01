@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 {
   nix = {
     extraOptions = ''
@@ -42,6 +42,13 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.bnk = ./home/home.nix;
+  };
 
   system.stateVersion = "25.11"; # Did you read the comment?
 
