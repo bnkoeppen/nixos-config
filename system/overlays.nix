@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 {
-  nixpkgs.overlays = [ ];
+  nixpkgs.overlays = [ inputs.dolphin-overlay.overlays.default ];
 }

@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    pavucontrol
     brightnessctl
+    pavucontrol
+    playerctl
   ];
 }
