@@ -2,7 +2,7 @@
 {
   imports = [
     ./bash
-    #./dolphin
+    ./dolphin
     ./fuzzel
     ./git
     ./hyprshot
