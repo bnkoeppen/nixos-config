@@ -6,9 +6,9 @@
 
   home.packages = with pkgs; [
     azahar
-    discord
     gimp
     libreoffice
+    musescore
     readest
     vintagestory
 
