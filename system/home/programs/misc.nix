@@ -7,7 +7,6 @@
   home.packages = with pkgs; [
     azahar
     discord
-    fractal # Requires keyring
     gimp
     libreoffice
     readest

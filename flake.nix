@@ -8,18 +8,23 @@
       url = "github:NixOS/nixpkgs/nixos-25.11";
     };
 
+    dolphin-overlay = {
+      url = "github:rumboon/dolphin-overlay";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    stylix = {
+      url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     cider = {
       url = "/home/bnk/programs/cider-2";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dolphin-overlay = {
-      url = "github:rumboon/dolphin-overlay";
     };
 
   };
@@ -29,6 +34,7 @@
       self,
       nixpkgs,
       home-manager,
+      stylix,
       ...
     }@inputs:
     {
@@ -39,6 +45,7 @@
           modules = [
             ./system/configuration.nix
             home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
           ];
         };
       };

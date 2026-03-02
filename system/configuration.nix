@@ -15,9 +15,9 @@
   imports = [
     ./programs
     ./services
+    ./styling
 
     ./hardware-configuration.nix
-    ./fonts.nix
     ./overlays.nix
   ];
 

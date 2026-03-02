@@ -8,13 +8,7 @@
       font-awesome
       nerd-fonts.symbols-only
       ia-writer-quattro
+      ia-writer-mono
     ];
-
-    fontconfig.defaultFonts = {
-      sansSerif = [
-        "iA Quattro Writer S"
-        "DejaVu Sans"
-      ];
-    };
   };
 }
