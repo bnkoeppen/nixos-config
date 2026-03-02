@@ -1,5 +1,5 @@
 {
-  services.blueman.enable = true;
+  services.blueman.enable = true; # Bluetooth manager
   services.libinput.enable = true; # Touchpad support
   services.thermald.enable = true; # Laptop thermals
 

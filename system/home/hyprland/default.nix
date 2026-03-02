@@ -14,8 +14,8 @@
       ",preferred,auto,1,mirror,eDP-1"
     ];
 
-    "$terminal" = "alacritty";
-    "$fileManager" = "dolphin";
+    "$terminal" = "kitty";
+    "$fileManager" = "$terminal -e yazi";
     "$menu" = "fuzzel";
 
     env = [
