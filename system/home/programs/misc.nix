@@ -1,5 +1,6 @@
 { inputs, pkgs, ... }:
 {
+  programs.alacritty.enable = true;
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;

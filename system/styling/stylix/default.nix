@@ -7,6 +7,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
+
     fonts = {
       sansSerif = {
         package = pkgs.ia-writer-quattro;
@@ -17,5 +18,13 @@
         name = "iA Writer Mono V";
       };
     };
+
+    opacity = {
+      applications = 0.5;
+      desktop = 0.5;
+      popups = 0.8;
+      terminal = 0.5;
+    };
+
   };
 }

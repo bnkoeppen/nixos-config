@@ -14,7 +14,7 @@
       ",preferred,auto,1,mirror,eDP-1"
     ];
 
-    "$terminal" = "kitty";
+    "$terminal" = "alacritty";
     "$fileManager" = "dolphin";
     "$menu" = "fuzzel";
 

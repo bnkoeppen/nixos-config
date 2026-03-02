@@ -7,8 +7,6 @@
       corefonts
       font-awesome
       nerd-fonts.symbols-only
-      ia-writer-quattro
-      ia-writer-mono
     ];
   };
 }

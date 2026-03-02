@@ -6,7 +6,6 @@
     ./fuzzel
     ./git
     ./hyprshot
-    ./kitty
     ./nixcord
     ./obs-studio
     ./zed
