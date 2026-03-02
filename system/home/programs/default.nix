@@ -2,6 +2,7 @@
 {
   imports = [
     ./bash
+    ./cliflux
     ./fuzzel
     ./git
     ./hyprshot

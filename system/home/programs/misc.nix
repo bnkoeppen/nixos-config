@@ -5,8 +5,10 @@
     nix-direnv.enable = true;
   };
   programs.fastfetch.enable = true;
+  programs.feh.enable = true;
   programs.keepassxc.enable = true;
   programs.vim.enable = true;
+  programs.zathura.enable = true;
 
   home.packages = with pkgs; [
     azahar

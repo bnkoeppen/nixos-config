@@ -1,0 +1,13 @@
+{ ... }:
+{
+  xdg.configFile."cliflux/config.toml".text = ''
+    api_key = "FIXME"
+    server_url = "FIXME"
+    allow_invalid_certs = false
+    use_rustls = false
+
+    [theme]
+    unread_color = "Reset"
+    read_color = "Gray"
+  '';
+}
