@@ -1,5 +1,9 @@
 { ... }:
 {
+  imports = [
+    ./stylix.nix
+  ];
+
   programs.nixcord = {
     enable = true;
     discord.vencord.enable = true;
