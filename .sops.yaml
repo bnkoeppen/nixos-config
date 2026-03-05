@@ -1,0 +1,7 @@
+keys:
+  - &bnk age1fuhg34eepq23gq24vzqh58jr24xmjye9g94kxlyspg9k8grzkvms3yh8gd
+creation_rules:
+  - path_regex: system/secrets/secrets.yaml$
+    key_groups:
+      - age:
+          - *bnk

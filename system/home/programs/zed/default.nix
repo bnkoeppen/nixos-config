@@ -3,7 +3,10 @@
   programs.zed-editor = {
     enable = true;
 
-    extensions = [ "nix" ];
+    extensions = [
+      "nix"
+      "quarto"
+    ];
 
     extraPackages = with pkgs; [
       nixd # nix

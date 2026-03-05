@@ -9,6 +9,7 @@
     ./kitty
     ./nixcord
     ./obs-studio
+    ./vscodium
     ./yazi
     ./zed
 
