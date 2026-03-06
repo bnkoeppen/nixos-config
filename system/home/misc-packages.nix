@@ -5,8 +5,5 @@
 
     python3
     racket
-    go
-    gcc
-    fyne
   ];
 }
