@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   nix = {
     extraOptions = ''
@@ -28,9 +28,14 @@
   hardware.bluetooth.enable = true;
 
   networking.hostName = "zora";
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-fortisslvpn
+    ];
+  };
 
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Denver";
 
   users.users.bnk = {
     isNormalUser = true;
@@ -51,6 +56,10 @@
     users.bnk = ./home/home.nix;
   };
 
-  system.stateVersion = "25.11"; # Did you read the comment?
+  environment.systemPackages = with pkgs; [
+    openfortivpn
+  ];
+
+  system.stateVersion = "25.05"; # Did you read the comment?
 
 }

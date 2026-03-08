@@ -5,6 +5,7 @@ with pkgs.vscode-extensions;
   sainnhe.gruvbox-material
   ms-python.python
   golang.go
+  ms-toolsai.jupyter
 ]
 ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
   {

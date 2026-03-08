@@ -2,6 +2,7 @@
 {
   imports = [
     ./bash
+    ./calibre
     ./cliflux
     ./fuzzel
     ./git
