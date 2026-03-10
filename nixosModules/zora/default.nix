@@ -1,8 +1,8 @@
 {
   imports = [
-    ./mullvad-vpn
-    ./pipewire
+    ./secrets
     ./tailscale
+    ./tlp
 
     ./misc.nix
   ];

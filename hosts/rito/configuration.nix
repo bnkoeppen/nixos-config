@@ -14,6 +14,7 @@
 
   imports = [
     ../../nixosModules
+    ../../nixosModules/rito
 
     ./hardware-configuration.nix
   ];

@@ -1,7 +1,12 @@
 keys:
-  - &bnk age1fuhg34eepq23gq24vzqh58jr24xmjye9g94kxlyspg9k8grzkvms3yh8gd
+  - &bnk_zora age1fuhg34eepq23gq24vzqh58jr24xmjye9g94kxlyspg9k8grzkvms3yh8gd
+  - &bnk_rito age15jeertjy68rmqztl6ck6wstrpg7c3pyv8nu5furgartppm99h5cs87gwfw
 creation_rules:
-  - path_regex: system/secrets/secrets.yaml$
+  - path_regex: nixosModules/zora/secrets/secrets.yaml$
     key_groups:
       - age:
-          - *bnk
+          - *bnk_zora
+  - path_regex: nixosModules/rito/secrets/secrets.yaml$
+    key_groups:
+      - age:
+          - *bnk_rito

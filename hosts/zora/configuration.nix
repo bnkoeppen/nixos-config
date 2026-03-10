@@ -14,6 +14,7 @@
 
   imports = [
     ../../nixosModules
+    ../../nixosModules/zora
 
     ./hardware-configuration.nix
   ];

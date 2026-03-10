@@ -1,7 +1,10 @@
 { config, ... }:
 {
   services.tailscale = {
-    enable = false;
+    enable = true;
     authKeyFile = config.sops.secrets.tailscaleKey.path;
   };
+
+  services.resolved.enable = true; # Fixes weird DNS issues
+
 }
