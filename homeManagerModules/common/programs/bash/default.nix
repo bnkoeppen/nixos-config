@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   programs.bash = {
     enable = true;
@@ -6,7 +6,7 @@
 
     shellAliases = {
       ngc = "nix-store --gc";
-      nrebuild = "sudo nixos-rebuild switch --flake /etc/nixos";
+      nrebuild = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/repos/nixos-config";
     };
   };
 }

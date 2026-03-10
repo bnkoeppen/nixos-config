@@ -3,6 +3,7 @@
   imports = [
     inputs.nixcord.homeModules.nixcord
     ../../homeManagerModules
+    ../../homeManagerModules/zora
   ];
 
   home.username = "bnk";

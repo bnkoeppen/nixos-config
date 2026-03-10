@@ -17,7 +17,5 @@
     musescore
     readest
     vintagestory
-
-    inputs.cider.packages.x86_64-linux.cider-2
   ];
 }

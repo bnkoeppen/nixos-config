@@ -54,6 +54,16 @@
             stylix.nixosModules.stylix
           ];
         };
+        rito = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/rito/configuration.nix
+            home-manager.nixosModules.home-manager
+            sops-nix.nixosModules.sops
+            stylix.nixosModules.stylix
+          ];
+        };
       };
     };
 }
