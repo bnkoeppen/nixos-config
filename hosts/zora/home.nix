@@ -2,11 +2,7 @@
 {
   imports = [
     inputs.nixcord.homeModules.nixcord
-    ./misc-packages.nix
-
-    ./programs
-    ./hyprland
-    ./services
+    ../../homeManagerModules
   ];
 
   home.username = "bnk";

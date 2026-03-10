@@ -48,7 +48,7 @@
           specialArgs = { inherit inputs; };
           system = "x86_64-linux";
           modules = [
-            ./system/configuration.nix
+            ./hosts/zora/configuration.nix
             home-manager.nixosModules.home-manager
             sops-nix.nixosModules.sops
             stylix.nixosModules.stylix

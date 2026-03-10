@@ -1,6 +1,5 @@
 {
   imports = [
-    ./miniflux
     ./mullvad-vpn
     ./pipewire
     ./tailscale

@@ -13,13 +13,9 @@
   };
 
   imports = [
-    ./programs
-    ./secrets
-    ./services
-    ./styling
+    ../../nixosModules
 
     ./hardware-configuration.nix
-    ./overlays.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -53,7 +49,7 @@
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.bnk = ./home/home.nix;
+    users.bnk = ./home.nix;
   };
 
   environment.systemPackages = with pkgs; [
