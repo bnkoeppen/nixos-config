@@ -57,6 +57,7 @@
   environment.systemPackages = with pkgs; [
     openfortivpn
     omnissa-horizon-client
+    git  
   ];
 
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
