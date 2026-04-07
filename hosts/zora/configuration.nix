@@ -32,11 +32,12 @@
     ];
   };
 
-  time.timeZone = "America/Denver";
+  time.timeZone = "America/New_York";
 
   users.users.bnk = {
     isNormalUser = true;
     extraGroups = [
+      "dialout" # Yubikey
       "wheel"
       "networkmanager"
     ];
@@ -55,7 +56,10 @@
 
   environment.systemPackages = with pkgs; [
     openfortivpn
+    omnissa-horizon-client
   ];
+
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
 

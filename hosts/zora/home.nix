@@ -1,4 +1,9 @@
-{ inputs, config, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 {
   imports = [
     inputs.nixcord.homeModules.nixcord
@@ -9,9 +14,21 @@
   home.username = "bnk";
   home.homeDirectory = "/home/bnk";
 
-  xdg.userDirs.enable = true;
-  xdg.userDirs.documents = "${config.home.homeDirectory}/documents/xdg_documents";
-  xdg.userDirs.download = "${config.home.homeDirectory}/downloads";
+  xdg = {
+    userDirs = {
+      enable = true;
+      documents = "${config.home.homeDirectory}/documents/xdg_documents";
+      download = "${config.home.homeDirectory}/downloads";
+    };
+  };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 24;
+  };
 
   home.stateVersion = "25.05";
 

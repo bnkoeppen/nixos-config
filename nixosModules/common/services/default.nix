@@ -5,5 +5,6 @@
     ./tailscale
 
     ./misc.nix
+    ./navidrome.nix
   ];
 }

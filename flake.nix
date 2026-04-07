@@ -27,6 +27,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     cider = {
       url = "/home/bnk/programs/cider-2";
       inputs.nixpkgs.follows = "nixpkgs";

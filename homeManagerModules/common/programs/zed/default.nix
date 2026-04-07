@@ -5,7 +5,6 @@
 
     extensions = [
       "nix"
-      "quarto"
     ];
 
     extraPackages = with pkgs; [
