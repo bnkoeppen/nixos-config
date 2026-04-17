@@ -106,6 +106,7 @@
       "$mainMod, P, pseudo"
       "$mainMod, J, togglesplit"
       "$mainMod, L, exec, hyprlock"
+      "$mainMod, F, fullscreen"
 
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"

@@ -6,5 +6,6 @@
 
     ./misc.nix
     ./navidrome.nix
+    ./yubikey.nix
   ];
 }
