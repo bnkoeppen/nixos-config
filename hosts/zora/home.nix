@@ -32,4 +32,9 @@
 
   home.stateVersion = "25.05";
 
+  # Post 25.05 defaults changes
+  gtk.gtk4.theme = null;
+  programs.yazi.shellWrapperName = "y";
+  xdg.userDirs.setSessionVariables = false;
+
 }
