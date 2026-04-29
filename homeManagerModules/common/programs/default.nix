@@ -14,5 +14,6 @@
     ./zed
 
     ./misc.nix
+    ./zotero.nix
   ];
 }
