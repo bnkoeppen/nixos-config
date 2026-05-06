@@ -13,6 +13,7 @@
     ./yazi
     ./zed
 
+    ./foot.nix
     ./misc.nix
     ./zotero.nix
   ];

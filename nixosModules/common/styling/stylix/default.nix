@@ -23,7 +23,7 @@
       applications = 0.5;
       desktop = 0.5;
       popups = 0.8;
-      terminal = 0.5;
+      terminal = 1.0;
     };
 
   };
