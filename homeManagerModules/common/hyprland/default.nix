@@ -63,7 +63,6 @@
     };
 
     dwindle = {
-      pseudotile = true;
       preserve_split = true;
     };
 
@@ -104,7 +103,6 @@
       "$mainMod, V, togglefloating"
       "$mainMod, space, exec, $menu"
       "$mainMod, P, pseudo"
-      "$mainMod, J, togglesplit"
       "$mainMod, L, exec, hyprlock"
       "$mainMod, F, fullscreen"
 
