@@ -2,6 +2,8 @@
 {
   imports = [
     ./hyprland
+    ./sway
+
     ./programs
     ./services
 

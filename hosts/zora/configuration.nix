@@ -23,6 +23,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  security.pam.services.swaylock = { };
+  services.gnome.gnome-keyring.enable = true;
+  security.polkit.enable = true;
+
   hardware.bluetooth.enable = true;
 
   networking.hostName = "zora";
