@@ -53,9 +53,7 @@
     users.bnk = ./home.nix;
   };
 
-  environment.systemPackages = with pkgs; [
-    openfortivpn
-  ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
 

@@ -17,6 +17,13 @@
         package = pkgs.ia-writer-mono;
         name = "iA Writer Mono V";
       };
+
+      sizes = {
+        applications = 12;
+        desktop = 12;
+        popups = 12;
+        terminal = 12;
+      };
     };
 
     opacity = {
