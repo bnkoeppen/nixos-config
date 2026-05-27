@@ -32,11 +32,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    cider = {
-      url = "/home/bnk/programs/cider-2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs =
