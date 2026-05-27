@@ -16,7 +16,7 @@
       ",preferred,auto,1,mirror,eDP-1"
     ];
 
-    "$terminal" = "kitty";
+    "$terminal" = "foot";
     "$fileManager" = "$terminal -e yazi";
     "$menu" = "fuzzel";
 
