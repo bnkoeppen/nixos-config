@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./minecraft
     ./nixcord
     ./vscodium
 

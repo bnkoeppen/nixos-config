@@ -16,7 +16,6 @@
     gimp
     libreoffice
     musescore
-    prismlauncher
     readest
     vintagestory
   ];
