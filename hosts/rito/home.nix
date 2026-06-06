@@ -8,6 +8,7 @@
   imports = [
     inputs.nixcord.homeModules.nixcord
     ../../homeManagerModules
+    ../../homeManagerModules/rito
   ];
 
   home.username = "bnk";
@@ -18,6 +19,13 @@
       enable = true;
       documents = "${config.home.homeDirectory}/documents/xdg_documents";
       download = "${config.home.homeDirectory}/downloads";
+    };
+
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "inode/directory" = "pcmanfm.desktop";
+      };
     };
   };
 
