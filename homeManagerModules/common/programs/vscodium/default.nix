@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   stylix.targets.vscode.enable = false;
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
     package = pkgs.vscodium;
     profiles.default.extensions = import ./extensions.nix { inherit pkgs; };
