@@ -11,6 +11,7 @@
     ./git.nix
     ./hyprshot.nix
     ./misc.nix
+    ./neovim.nix
     ./obs-studio.nix
     ./yazi.nix
     ./zed-editor.nix
