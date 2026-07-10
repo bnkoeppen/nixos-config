@@ -22,7 +22,7 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
+  boot.kernelModules = [ "uinput" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {

@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    osu-osu-lazer-bin
+    osu-lazer-bin
   ];
 }

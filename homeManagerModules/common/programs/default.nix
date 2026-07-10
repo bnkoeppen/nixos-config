@@ -14,6 +14,7 @@
     ./misc.nix
     ./neovim.nix
     ./obs-studio.nix
+    ./osu.nix
     ./yazi.nix
     ./zed-editor.nix
     ./zotero.nix

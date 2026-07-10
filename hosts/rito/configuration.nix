@@ -22,7 +22,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  hardware.opentabletdriver.enable = true;
   hardware.bluetooth.enable = true;
+  hardware.uinput.enable = true;
 
   networking.hostName = "rito";
   networking.networkmanager = {

@@ -1,5 +1,7 @@
 {
   imports = [
     ./secrets
+
+    ./misc.nix
   ];
 }
