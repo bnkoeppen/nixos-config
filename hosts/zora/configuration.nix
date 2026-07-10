@@ -36,6 +36,12 @@
       networkmanager-fortisslvpn
     ];
   };
+  networking.nameservers = [
+    "1.1.1.1"
+  ];
+  networking.search = [
+    "taile9045b.ts.net"
+  ];
 
   time.timeZone = "America/New_York";
 
@@ -46,6 +52,13 @@
       "wheel"
       "networkmanager"
     ];
+  };
+
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -63,7 +76,11 @@
     git
   ];
 
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
