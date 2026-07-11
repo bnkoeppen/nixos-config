@@ -15,7 +15,7 @@
     gajim
     gimp
     libreoffice
-    musescore
+    # musescore
     readest
     vintagestory
   ];
