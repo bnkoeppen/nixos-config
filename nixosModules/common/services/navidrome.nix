@@ -5,7 +5,7 @@
   };
   users.groups.navidrome = { };
   services.navidrome = {
-    enable = true;
+    enable = false;
     openFirewall = true;
   };
 }
